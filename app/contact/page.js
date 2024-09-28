@@ -39,8 +39,12 @@ const ContactPage = () => {
   useEffect(() => {
     // Simulate data fetching
     const fetchData = async () => {
-      const dataFetchPromise = new Promise((resolve) => setTimeout(resolve, 1500)); 
-      const minimumLoadingTime = new Promise((resolve) => setTimeout(resolve, 1200)); 
+      const dataFetchPromise = new Promise((resolve) =>
+        setTimeout(resolve, 1500),
+      );
+      const minimumLoadingTime = new Promise((resolve) =>
+        setTimeout(resolve, 1200),
+      );
 
       await Promise.all([dataFetchPromise, minimumLoadingTime]);
       setLoading(false);
@@ -50,7 +54,7 @@ const ContactPage = () => {
   }, []);
 
   if (loading) {
-    return <LoadingSpinner />; 
+    return <LoadingSpinner />;
   }
 
   return (

@@ -24,14 +24,12 @@ export default function LoadingSpinner() {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      
-        <l-line-spinner
-          size="40"
-          stroke="3"
-          speed="1"
-          color="black"
-        ></l-line-spinner>
-      
+      <l-line-spinner
+        size="40"
+        stroke="3"
+        speed="1"
+        color="black"
+      ></l-line-spinner>
     </div>
   );
 }

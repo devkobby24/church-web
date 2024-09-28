@@ -1,37 +1,40 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Header from '../components/ui/Header';
-import Footer from '../components/ui/Footer';
-import LoadingSpinner from './loading'; // Import your loading spinner component
+"use client";
+import React, { useState, useEffect } from "react";
+import Header from "../components/ui/Header";
+import Footer from "../components/ui/Footer";
+import LoadingSpinner from "./loading"; // Import your loading spinner component
 
 // Dummy data for sermons (you can fetch this from an API or database in a real app)
 const sermons = [
   {
     id: 1,
-    title: 'The Power of Prayer',
-    preacher: 'Pastor John Doe',
-    date: 'September 10, 2024',
-    videoUrl: 'https://www.youtube.com/embed/your-video-id', // Example video URL
-    audioUrl: 'https://your-church-sermon-audio.com/sermon1.mp3', // Example audio URL
-    description: 'An inspiring message on the importance of prayer in the life of a believer.',
+    title: "The Power of Prayer",
+    preacher: "Pastor John Doe",
+    date: "September 10, 2024",
+    videoUrl: "https://www.youtube.com/embed/your-video-id", // Example video URL
+    audioUrl: "https://your-church-sermon-audio.com/sermon1.mp3", // Example audio URL
+    description:
+      "An inspiring message on the importance of prayer in the life of a believer.",
   },
   {
     id: 2,
-    title: 'Faith That Moves Mountains',
-    preacher: 'Pastor Jane Smith',
-    date: 'September 17, 2024',
-    videoUrl: 'https://www.youtube.com/embed/your-video-id2',
-    audioUrl: 'https://your-church-sermon-audio.com/sermon2.mp3',
-    description: 'A powerful sermon on the impact of faith and how it can change our lives.',
+    title: "Faith That Moves Mountains",
+    preacher: "Pastor Jane Smith",
+    date: "September 17, 2024",
+    videoUrl: "https://www.youtube.com/embed/your-video-id2",
+    audioUrl: "https://your-church-sermon-audio.com/sermon2.mp3",
+    description:
+      "A powerful sermon on the impact of faith and how it can change our lives.",
   },
   {
     id: 3,
-    title: 'Loving Your Neighbor',
-    preacher: 'Pastor Mark Johnson',
-    date: 'September 24, 2024',
-    videoUrl: 'https://www.youtube.com/embed/your-video-id3',
-    audioUrl: 'https://your-church-sermon-audio.com/sermon3.mp3',
-    description: 'A message on the importance of showing love and compassion to those around us.',
+    title: "Loving Your Neighbor",
+    preacher: "Pastor Mark Johnson",
+    date: "September 24, 2024",
+    videoUrl: "https://www.youtube.com/embed/your-video-id3",
+    audioUrl: "https://your-church-sermon-audio.com/sermon3.mp3",
+    description:
+      "A message on the importance of showing love and compassion to those around us.",
   },
 ];
 
@@ -41,8 +44,12 @@ const SermonsPage = () => {
   useEffect(() => {
     // Simulate data fetching
     const fetchData = async () => {
-      const dataFetchPromise = new Promise((resolve) => setTimeout(resolve, 1500)); 
-      const minimumLoadingTime = new Promise((resolve) => setTimeout(resolve, 1200)); 
+      const dataFetchPromise = new Promise((resolve) =>
+        setTimeout(resolve, 1500),
+      );
+      const minimumLoadingTime = new Promise((resolve) =>
+        setTimeout(resolve, 1200),
+      );
 
       await Promise.all([dataFetchPromise, minimumLoadingTime]);
       setLoading(false);
@@ -52,7 +59,7 @@ const SermonsPage = () => {
   }, []);
 
   if (loading) {
-    return <LoadingSpinner />; 
+    return <LoadingSpinner />;
   }
 
   return (
@@ -63,7 +70,10 @@ const SermonsPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sermons.map((sermon) => (
-            <div key={sermon.id} className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-start">
+            <div
+              key={sermon.id}
+              className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-start"
+            >
               <h2 className="text-2xl font-semibold mb-2">{sermon.title}</h2>
               <p className="text-gray-600 mb-1">
                 <span className="font-bold">Preacher: </span> {sermon.preacher}
