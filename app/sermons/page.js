@@ -30,7 +30,7 @@ const sermons = [
     date: 'September 24, 2024',
     videoUrl: 'https://www.youtube.com/embed/your-video-id3',
     audioUrl: 'https://your-church-sermon-audio.com/sermon3.mp3',
-    description: 'Learning to love others as Christ loved us.',
+    description: 'A message on the importance of showing love and compassion to those around us.',
   },
 ];
 
@@ -43,7 +43,7 @@ const SermonsPage = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {sermons.map((sermon) => (
-          <div key={sermon.id} className="bg-white rounded-lg shadow-md p-6">
+          <div key={sermon.id} className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-start">
             <h2 className="text-2xl font-semibold mb-2">{sermon.title}</h2>
             <p className="text-gray-600 mb-1">
               <span className="font-bold">Preacher: </span> {sermon.preacher}
@@ -70,6 +70,7 @@ const SermonsPage = () => {
               </audio>
             )}
           </div>
+
         ))}
       </div>
     </div>
