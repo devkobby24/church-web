@@ -8,7 +8,7 @@ export default function LoadingSpinner() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 3000); // 3 seconds timeout
+        }, 3000); 
 
         // Clean up the timer
         return () => clearTimeout(timer);
@@ -22,7 +22,7 @@ export default function LoadingSpinner() {
         <div className="flex justify-center items-center h-screen">
             <div
                 className="w-16 h-16 border-4 border-blue-500 border-dotted rounded-full"
-                style={{ animation: 'spin 3s linear infinite' }} // Adjust speed here
+                style={{ animation: 'spin 3s linear infinite' }} 
             >
                 Sermons
             </div>
