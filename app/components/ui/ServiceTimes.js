@@ -1,4 +1,4 @@
-import { Clock } from 'lucide-react';
+import { Clock } from "lucide-react";
 
 export default function ServiceTimes() {
   return (
