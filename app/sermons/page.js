@@ -41,18 +41,18 @@ const SermonsPage = () => {
   useEffect(() => {
     // Simulate data fetching
     const fetchData = async () => {
-      const dataFetchPromise = new Promise((resolve) => setTimeout(resolve, 1500)); // Simulate quick data fetch
-      const minimumLoadingTime = new Promise((resolve) => setTimeout(resolve, 3000)); // 3-second delay for loading spinner
+      const dataFetchPromise = new Promise((resolve) => setTimeout(resolve, 1500)); 
+      const minimumLoadingTime = new Promise((resolve) => setTimeout(resolve, 3000)); 
 
       await Promise.all([dataFetchPromise, minimumLoadingTime]);
-      setLoading(false); // Stop loading once both promises are fulfilled
+      setLoading(false);
     };
 
     fetchData();
   }, []);
 
   if (loading) {
-    return <LoadingSpinner />; // Display loading spinner during the data fetch and delay
+    return <LoadingSpinner />; 
   }
 
   return (
