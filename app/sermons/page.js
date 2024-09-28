@@ -42,7 +42,7 @@ const SermonsPage = () => {
     // Simulate data fetching
     const fetchData = async () => {
       const dataFetchPromise = new Promise((resolve) => setTimeout(resolve, 1500)); 
-      const minimumLoadingTime = new Promise((resolve) => setTimeout(resolve, 3000)); 
+      const minimumLoadingTime = new Promise((resolve) => setTimeout(resolve, 1200)); 
 
       await Promise.all([dataFetchPromise, minimumLoadingTime]);
       setLoading(false);
