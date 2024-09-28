@@ -1,6 +1,13 @@
 import Link from 'next/link';
+import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
+
+const getCurrentYear = () => {
+    return new Date().getFullYear();
+};
 
 export default function Footer() {
+    const currentYear = getCurrentYear(); 
+
     return (
         <footer className="bg-gray-800 text-white py-8">
             <div className="container mx-auto px-4">
@@ -23,14 +30,20 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
                         <div className="flex space-x-4">
-                            <a href="#" className="hover:text-gray-300">Facebook</a>
-                            <a href="#" className="hover:text-gray-300">Instagram</a>
-                            <a href="#" className="hover:text-gray-300">YouTube</a>
+                            <Link href="https://www.facebook.com" target="_blank" className="hover:text-gray-300">
+                                <FaFacebookF className="h-6 w-6" />
+                            </Link>
+                            <Link href="https://www.instagram.com" target="_blank" className="hover:text-gray-300">
+                                <FaInstagram className="h-6 w-6" />
+                            </Link>
+                            <Link href="https://www.youtube.com" target="_blank" className="hover:text-gray-300">
+                                <FaYoutube className="h-6 w-6" />
+                            </Link>
                         </div>
                     </div>
                 </div>
                 <div className="mt-8 text-center text-sm">
-                    <p>&copy; 2023 Grace Community Church. All rights reserved.</p>
+                    <p>&copy; {currentYear} Grace Community Church. All rights reserved.</p>
                 </div>
             </div>
         </footer>
