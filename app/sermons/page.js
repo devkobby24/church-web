@@ -1,7 +1,8 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/ui/Header';
 import Footer from '../components/ui/Footer';
+import LoadingSpinner from './loading'; // Import your loading spinner component
 
 // Dummy data for sermons (you can fetch this from an API or database in a real app)
 const sermons = [
@@ -35,46 +36,64 @@ const sermons = [
 ];
 
 const SermonsPage = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate data fetching
+    const fetchData = async () => {
+      const dataFetchPromise = new Promise((resolve) => setTimeout(resolve, 1500)); // Simulate quick data fetch
+      const minimumLoadingTime = new Promise((resolve) => setTimeout(resolve, 3000)); // 3-second delay for loading spinner
+
+      await Promise.all([dataFetchPromise, minimumLoadingTime]);
+      setLoading(false); // Stop loading once both promises are fulfilled
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <LoadingSpinner />; // Display loading spinner during the data fetch and delay
+  }
+
   return (
     <div>
       <Header />
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-4xl font-bold text-center mb-8">Sermons</h1>
+      <div className="min-h-screen bg-gray-100 p-8">
+        <h1 className="text-4xl font-bold text-center mb-8">Sermons</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {sermons.map((sermon) => (
-          <div key={sermon.id} className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-start">
-            <h2 className="text-2xl font-semibold mb-2">{sermon.title}</h2>
-            <p className="text-gray-600 mb-1">
-              <span className="font-bold">Preacher: </span> {sermon.preacher}
-            </p>
-            <p className="text-gray-600 mb-1">
-              <span className="font-bold">Date: </span> {sermon.date}
-            </p>
-            <p className="text-gray-700 mb-4">{sermon.description}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sermons.map((sermon) => (
+            <div key={sermon.id} className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-start">
+              <h2 className="text-2xl font-semibold mb-2">{sermon.title}</h2>
+              <p className="text-gray-600 mb-1">
+                <span className="font-bold">Preacher: </span> {sermon.preacher}
+              </p>
+              <p className="text-gray-600 mb-1">
+                <span className="font-bold">Date: </span> {sermon.date}
+              </p>
+              <p className="text-gray-700 mb-4">{sermon.description}</p>
 
-            {/* Video or Audio Embed */}
-            {sermon.videoUrl ? (
-              <div className="aspect-w-16 aspect-h-9 mb-4">
-                <iframe
-                  className="w-full h-64 rounded-lg"
-                  src={sermon.videoUrl}
-                  title={sermon.title}
-                  allowFullScreen
-                ></iframe>
-              </div>
-            ) : (
-              <audio controls className="w-full">
-                <source src={sermon.audioUrl} type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
-            )}
-          </div>
-
-        ))}
+              {/* Video or Audio Embed */}
+              {sermon.videoUrl ? (
+                <div className="aspect-w-16 aspect-h-9 mb-4">
+                  <iframe
+                    className="w-full h-64 rounded-lg"
+                    src={sermon.videoUrl}
+                    title={sermon.title}
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              ) : (
+                <audio controls className="w-full">
+                  <source src={sermon.audioUrl} type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </div>
   );
 };
