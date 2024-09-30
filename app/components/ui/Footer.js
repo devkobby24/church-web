@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
 
 const getCurrentYear = () => {
   return new Date().getFullYear();
@@ -66,6 +66,13 @@ export default function Footer() {
                 className="hover:text-gray-300"
               >
                 <FaYoutube className="h-6 w-6" />
+              </Link>
+              <Link
+                href="https://www.tiktok.com"
+                target="_blank"
+                className="hover:text-gray-300"
+              >
+                <FaTiktok className="h-6 w-6" />
               </Link>
             </div>
           </div>
