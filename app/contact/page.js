@@ -6,14 +6,10 @@ import LoadingSpinner from "./loading";
 
 // Dummy church contact information
 const churchContactInfo = {
-  address: "Agona Ashanti, Ghana",
-  phone: "024 442 3085",
+  address: "Agona Ashanti. Ghana",
+  phone: "+123 456 7890",
   email: "info@churchname.org",
-  serviceTimes: [
-    "Glory service: Sundays 8:30-11:30am",
-    "Midweek service: Wednesdays 6:30-8:30pm",
-    "Fridays Dominion Service: 7-9pm",
-  ],
+  serviceTimes: "Glory Service: Sunday: 8:30 AM - 11:30 AM, Midweek Service: Wednesday: 6:30 PM - 8:30 PM, Dominion Service: Friday: 7:00 PM - 9:00 PM",
 };
 
 const ContactPage = () => {
@@ -71,9 +67,10 @@ const ContactPage = () => {
           <div className="flex justify-center mb-6">
             <iframe
               className="w-full h-64 md:h-96 max-w-4xl rounded-lg shadow-lg"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.91976037258!2d-122.0842491!3d37.4219999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba13e0a034d1%3A0xa03df4c88b2629dd!2sGoogleplex!5e0!3m2!1sen!2sus!4v1630457091308!5m2!1sen!2sus"
-              allowFullScreen=""
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.9090990901805!2d-1.484069953775341!3d6.938271272482923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdbc90002cf7e57%3A0xe3050b2baf096d0d!2sHabitat!5e1!3m2!1sen!2sgh!4v1729075518689!5m2!1sen!2sgh"
+              allowfullscreen=""
               loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
               title="Church Location"
             ></iframe>
           </div>
