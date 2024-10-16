@@ -18,10 +18,10 @@ export default function HeroSection() {
           Join us in worship, fellowship, and spiritual growth
         </p>
         <Link
-          href="/about"
+          href="/contact"
           className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300"
         >
-          Learn More
+          Worship With Us
         </Link>
       </div>
     </section>

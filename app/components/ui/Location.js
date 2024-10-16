@@ -8,7 +8,7 @@ export default function Location() {
         <MapPin className="w-6 h-6 text-gray-600 mr-2" />
         <h3 className="text-xl font-semibold">Location</h3>
       </div>
-      <p>123 Faith Street, Graceville, ST 12345</p>
+      <p> Agona Ashanti. Ghana </p>
       <Link
         href="/contact"
         className="text-blue-600 hover:underline mt-2 inline-block"
