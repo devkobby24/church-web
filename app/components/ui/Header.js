@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Church Name */}
         <Link href="/" className="text-2xl font-bold text-gray-800">
-          Glorious Assurance Ministries 
+          Glorious Assurance Ministries
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -95,33 +96,35 @@ export default function Header() {
               />
             </svg>
           </button>
+
           <Link
             href="/about"
             className="text-gray-800 text-2xl py-4"
             onClick={toggleMenu}
           >
-            About
+            <Button variant="outline">About</Button>
           </Link>
+
           <Link
             href="/contact"
             className="text-gray-800 text-2xl py-4"
             onClick={toggleMenu}
           >
-            Contact
+            <Button variant="outline">Contact</Button>
           </Link>
           <Link
             href="/events"
             className="text-gray-800 text-2xl py-4"
             onClick={toggleMenu}
           >
-            Events
+            <Button variant="outline">Events</Button>
           </Link>
           <Link
             href="/sermons"
             className="text-gray-800 text-2xl py-4"
             onClick={toggleMenu}
           >
-            Sermons
+            <Button variant="outline">Sermons</Button>
           </Link>
         </div>
       )}

@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-8">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -47,7 +47,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <div className="flex space-x-4">
               <Link
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/profile.php?id=100066628902399"
                 target="_blank"
                 className="hover:text-gray-300"
               >
