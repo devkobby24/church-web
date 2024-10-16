@@ -8,9 +8,9 @@ export default function ServiceTimes() {
         <h3 className="text-xl font-semibold">Service Times</h3>
       </div>
       <ul className="space-y-2">
-        <li>Sunday Worship: 9:00 AM & 11:00 AM</li>
-        <li>Wednesday Bible Study: 7:00 PM</li>
-        <li>Youth Group: Fridays at 6:30 PM</li>
+        <li><span className="font-semibold">Glory Service: Sunday:</span> 8:30 AM - 11:30 AM</li>
+        <li><span className="font-semibold">Midweek Service: Wednesday:</span> 6:30 PM - 8:30 PM</li>
+        <li><span className="font-semibold">Dominion Service: Friday:</span> 7:00 PM - 9:00 PM</li>
       </ul>
     </div>
   );

@@ -47,7 +47,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <div className="flex space-x-4">
               <Link
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/profile.php?id=100066628902399"
                 target="_blank"
                 className="hover:text-gray-300"
               >
