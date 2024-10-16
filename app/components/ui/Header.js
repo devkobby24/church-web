@@ -11,24 +11,44 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm">
-      <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Church Name */}
-        <Link href="/" className="text-2xl font-bold text-gray-800">
+      <nav className="container sm:mr-4 py-4 flex justify-between items-center">
+        {/* Church Name and Logo */}
+        <Link
+          href="/"
+          className="text-2xl font-bold text-gray-800 flex items-center"
+        >
+          <img
+            src="/logo.jpg"
+            className="w-10 h-10 rounded-full mr-2"
+            alt="Logo"
+          />
           Glorious Assurance Ministries
         </Link>
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-6">
-          <Link href="/about" className="text-gray-800 text-lg">
+          <Link
+            href="/about"
+            className="text-gray-800 text-lg hover:text-indigo-600"
+          >
             About
           </Link>
-          <Link href="/contact" className="text-gray-800 text-lg">
+          <Link
+            href="/contact"
+            className="text-gray-800 text-lg hover:text-indigo-600"
+          >
             Contact
           </Link>
-          <Link href="/events" className="text-gray-800 text-lg">
+          <Link
+            href="/events"
+            className="text-gray-800 text-lg hover:text-indigo-600"
+          >
             Events
           </Link>
-          <Link href="/sermons" className="text-gray-800 text-lg">
+          <Link
+            href="/sermons"
+            className="text-gray-800 text-lg hover:text-indigo-600"
+          >
             Sermons
           </Link>
         </div>
@@ -104,7 +124,6 @@ export default function Header() {
           >
             <Button variant="outline">About</Button>
           </Link>
-
           <Link
             href="/contact"
             className="text-gray-800 text-2xl py-4"
