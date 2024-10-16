@@ -39,8 +39,8 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p>123 Faith Street, Graceville, ST 12345</p>
-            <p>Phone: (555) 123-4567</p>
+            <p>Agona Ashanti, Ghana</p>
+            <p>Phone: 0244 423 085</p>
             <p>Email: info@gracechurch.org</p>
           </div>
           <div>
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 text-center text-sm">
           <p>
-            &copy; {currentYear} Grace Community Church. All rights reserved.
+            &copy; {currentYear} Glorious Assurance Ministries. All rights reserved.
           </p>
         </div>
       </div>

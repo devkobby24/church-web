@@ -6,10 +6,10 @@ import LoadingSpinner from "./loading";
 
 // Dummy church contact information
 const churchContactInfo = {
-  address: "123 Church Street, City, Country",
+  address: "Agona Ashanti. Ghana",
   phone: "+123 456 7890",
   email: "info@churchname.org",
-  serviceTimes: "Sunday: 9:00 AM & 11:00 AM, Wednesday: 7:00 PM",
+  serviceTimes: "Glory Service: Sunday: 8:30 AM - 11:30 AM, Midweek Service: Wednesday: 6:30 PM - 8:30 PM, Dominion Service: Friday: 7:00 PM - 9:00 PM",
 };
 
 const ContactPage = () => {
