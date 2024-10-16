@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 const getCurrentYear = () => {
   return new Date().getFullYear();
@@ -40,14 +40,14 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <p>Agona Ashanti, Ghana</p>
-            <p>Phone: 0244 423 085</p>
+            <p>Phone: 024 442 3085</p>
             <p>Email: info@gracechurch.org</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <div className="flex space-x-4">
               <Link
-                href="https://www.facebook.com"
+                href="https://web.facebook.com/profile.php?id=100066628902399"
                 target="_blank"
                 className="hover:text-gray-300"
               >
@@ -68,11 +68,11 @@ export default function Footer() {
                 <FaYoutube className="h-6 w-6" />
               </Link>
               <Link
-                href="https://www.tiktok.com"
+                href="https://api.whatsapp.com/send?phone=%2B233244423085&context=ARChFPY1-8ldfcD-R4Im0590P4pVyqsKT2PRV1HkUiAIWrLnER140FFdAlX--oJ8s-5Mtnz3wmeBZd_hxzDOzDMZYo9sWAR-msCFJ1taD3WuUQw3_onfUCT9ZMkZtujIo_N4NiX-LZfu1u4UAhE7lRpdJQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawF8esdleHRuA2FlbQIxMAABHSqNcqn4ioMrLD7YsoO8RhNUaFtHbAJ4ZiF-8PaC9SmC4GnLy9AkH_4bdg_aem_B7shkkXOafuiQLohO1vkow"
                 target="_blank"
                 className="hover:text-gray-300"
               >
-                <FaTiktok className="h-6 w-6" />
+                <FaWhatsapp className="h-6 w-6" />
               </Link>
             </div>
           </div>

@@ -6,10 +6,14 @@ import LoadingSpinner from "./loading";
 
 // Dummy church contact information
 const churchContactInfo = {
-  address: "Agona Ashanti. Ghana",
-  phone: "+123 456 7890",
+  address: "Agona Ashanti, Ghana",
+  phone: "024 442 3085",
   email: "info@churchname.org",
-  serviceTimes: "Glory Service: Sunday: 8:30 AM - 11:30 AM, Midweek Service: Wednesday: 6:30 PM - 8:30 PM, Dominion Service: Friday: 7:00 PM - 9:00 PM",
+  serviceTimes: [
+    "Glory service: Sundays 8:30-11:30am",
+    "Midweek service: Wednesdays 6:30-8:30pm",
+    "Fridays Dominion Service: 7-9pm",
+  ],
 };
 
 const ContactPage = () => {
@@ -28,10 +32,8 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Process form data here (send to API or email service)
-    console.log("Form submitted:", formData);
     alert("Thank you for your message! We will get back to you soon.");
-    setFormData({ name: "", email: "", message: "" }); // Reset form fields
+    setFormData({ name: "", email: "", message: "" });
   };
 
   const [loading, setLoading] = useState(true);
@@ -40,10 +42,10 @@ const ContactPage = () => {
     // Simulate data fetching
     const fetchData = async () => {
       const dataFetchPromise = new Promise((resolve) =>
-        setTimeout(resolve, 1500),
+        setTimeout(resolve, 1500)
       );
       const minimumLoadingTime = new Promise((resolve) =>
-        setTimeout(resolve, 1200),
+        setTimeout(resolve, 1200)
       );
 
       await Promise.all([dataFetchPromise, minimumLoadingTime]);
@@ -65,9 +67,7 @@ const ContactPage = () => {
 
         {/* Google Maps Section */}
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold text-center mb-6">
-            Our Location
-          </h2>
+          <h2 className="text-3xl font-semibold text-center mb-6">Our Location</h2>
           <div className="flex justify-center mb-6">
             <iframe
               className="w-full h-64 md:h-96 max-w-4xl rounded-lg shadow-lg"
@@ -81,9 +81,7 @@ const ContactPage = () => {
 
         {/* Contact Information Section */}
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold text-center mb-6">
-            Contact Information
-          </h2>
+          <h2 className="text-3xl font-semibold text-center mb-6">Contact Information</h2>
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gray-700 text-lg mb-4">
               <span className="font-bold">Address: </span>
@@ -91,43 +89,34 @@ const ContactPage = () => {
             </p>
             <p className="text-gray-700 text-lg mb-4">
               <span className="font-bold">Phone: </span>
-              <a
-                href={`tel:${churchContactInfo.phone}`}
-                className="text-blue-600 hover:underline"
-              >
+              <a href={`tel:${churchContactInfo.phone}`} className="text-blue-600 hover:underline">
                 {churchContactInfo.phone}
               </a>
             </p>
             <p className="text-gray-700 text-lg mb-4">
               <span className="font-bold">Email: </span>
-              <a
-                href={`mailto:${churchContactInfo.email}`}
-                className="text-blue-600 hover:underline"
-              >
+              <a href={`mailto:${churchContactInfo.email}`} className="text-blue-600 hover:underline">
                 {churchContactInfo.email}
               </a>
             </p>
             <p className="text-gray-700 text-lg mb-4">
               <span className="font-bold">Service Times: </span>
-              {churchContactInfo.serviceTimes}
+              {churchContactInfo.serviceTimes.map((time, index) => (
+                <span key={index} className="block">{time}</span>
+              ))}
             </p>
           </div>
         </section>
 
         {/* Contact Form Section */}
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold text-center mb-6">
-            Send Us a Message
-          </h2>
+          <h2 className="text-3xl font-semibold text-center mb-6">Send Us a Message</h2>
           <form
             className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md"
             onSubmit={handleSubmit}
           >
             <div className="mb-6">
-              <label
-                htmlFor="name"
-                className="block text-gray-700 font-bold mb-2"
-              >
+              <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
                 Name
               </label>
               <input
@@ -142,10 +131,7 @@ const ContactPage = () => {
             </div>
 
             <div className="mb-6">
-              <label
-                htmlFor="email"
-                className="block text-gray-700 font-bold mb-2"
-              >
+              <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
                 Email
               </label>
               <input
@@ -160,10 +146,7 @@ const ContactPage = () => {
             </div>
 
             <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="block text-gray-700 font-bold mb-2"
-              >
+              <label htmlFor="message" className="block text-gray-700 font-bold mb-2">
                 Message
               </label>
               <textarea
