@@ -13,7 +13,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Church Name */}
         <Link href="/" className="text-2xl font-bold text-gray-800">
-          Grace Community Church
+          Glorious Assurance Ministries 
         </Link>
 
         {/* Desktop Navigation Links */}
