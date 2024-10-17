@@ -4,7 +4,6 @@ import Header from "../components/ui/Header";
 import Footer from "../components/ui/Footer";
 import LoadingSpinner from "./loading";
 import { toast } from "sonner"
-import emailjs from 'emailjs-com';
 
 
 // Church contact information
