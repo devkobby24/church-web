@@ -8,7 +8,7 @@ import { toast } from "sonner"
 
 // Church contact information
 const churchContactInfo = {
-  address: "Agona Ashanti, Ghana",
+  address: "Agona Ashanti, Near The Habitat Apartment",
   phone: "024 442 3085",
   email: "nanakobby2002@gmail.com",
   serviceTimes: [
@@ -91,7 +91,7 @@ const ContactPage = () => {
           <div className="flex justify-center mb-6">
             <iframe
               className="w-full h-64 md:h-96 max-w-4xl rounded-lg shadow-lg"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.9090990901805!2d-1.484069953775341!3d6.938271272482923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdbc90002cf7e57%3A0xe3050b2baf096d0d!2sHabitat!5e1!3m2!1sen!2sgh!4v1729075518689!5m2!1sen!2sgh"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.9702013140895!2d-1.4860034250033556!3d6.938243993061748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdbc90002cf7e57%3A0xe3050b2baf096d0d!2sHabitat!5e0!3m2!1sen!2sgh!4v1729164337176!5m2!1sen!2sgh"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
