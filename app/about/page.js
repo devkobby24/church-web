@@ -11,7 +11,7 @@ const leadershipTeam = [
     name: "Prophet Kwasi Adu-Darko",
     title: "Chairman of the Board of Directors",
     bio: "Prophet Kwasi Adu-Darko has served our church for over 6 years, leading with a heart for community and spiritual growth.",
-    image: "/pastor-john.jpg", // Example image path
+    image: "/Ap.Adu.jpg", // Example image path
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const leadershipTeam = [
     name: "Pastor Kissi Albert",
     title: "Administrative Director",
     bio: "Pastor Kissi Albert plays a crucial role in managing the church's administrative functions, ensuring that all operations run smoothly and efficiently. His dedication to service and organizational expertise helps maintain the church's mission and vision, providing a strong foundation for the church's activities and outreach programs.",
-    image: "/mark-johnson.jpg",
+    image: "/Ps.Kissi.jpg",
   },
 ];
 
@@ -81,7 +81,7 @@ const AboutPage = () => {
                 <img
                   src={leader.image}
                   alt={leader.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-4"
+                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
                 <h3 className="text-2xl font-semibold mb-2">{leader.name}</h3>
                 <p className="text-gray-600 mb-4">{leader.title}</p>

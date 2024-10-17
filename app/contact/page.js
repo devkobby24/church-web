@@ -3,12 +3,15 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/ui/Header";
 import Footer from "../components/ui/Footer";
 import LoadingSpinner from "./loading";
+import { toast } from "sonner"
+import emailjs from 'emailjs-com';
 
-// Dummy church contact information
+
+// Church contact information
 const churchContactInfo = {
   address: "Agona Ashanti, Ghana",
   phone: "024 442 3085",
-  email: "info@churchname.org",
+  email: "nanakobby2002@gmail.com",
   serviceTimes: [
     "Glory service: Sundays 8:30-11:30am",
     "Midweek service: Wednesdays 6:30-8:30pm",
@@ -30,11 +33,27 @@ const ContactPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Thank you for your message! We will get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
-  };
+  const handleSubmit = async(e) => {
+      e.preventDefault();
+      const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+          },
+          body: JSON.stringify({
+              access_key: "cd76c502-46b3-43bb-b9c9-a25d64834145",
+              name: e.target.name.value,
+              email: e.target.email.value,
+              message: e.target.message.value,
+          }),
+      });
+      const result = await response.json();
+      if (result.success) {
+        setFormData({ name: "", email: "", message: "" });
+        toast("Your message has been sent!, we will get back to you soon!")
+      }
+  }
 
   const [loading, setLoading] = useState(true);
 
