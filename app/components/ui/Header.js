@@ -53,100 +53,103 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Hamburger Icon for Mobile */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={toggleMenu}
-            className="text-gray-800 focus:outline-none"
-          >
-            {isOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            )}
-          </button>
-        </div>
+{/* Hamburger Icon for Mobile */}
+<div className="md:hidden flex items-center">
+  <button
+    onClick={toggleMenu}
+    className="text-gray-800 focus:outline-none"
+  >
+    {isOpen ? (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-6 w-6 mx-4"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    ) : (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-6 w-6 mx-4"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+    )}
+  </button>
+</div>
+
+{/* Mobile Navigation Links - Sliding in from the side */}
+<div
+  className={`fixed top-0 bottom-0 right-0 bg-gray-100 z-20 w-40 transform transition-transform duration-500 ease-in-out flex flex-col items-center h-72 rounded-lg shadow-lg ${
+    isOpen ? 'translate-x-0' : 'translate-x-full'
+  }`}
+>
+  <button
+    onClick={toggleMenu}
+    className="absolute top-6 right-[1px] text-gray-800"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-6 w-6 mr-4"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M6 18L18 6M6 6l12 12"
+      />
+    </svg>
+  </button>
+
+  <Link
+    href="/about"
+    className="text-gray-800 text-2xl py-4"
+    onClick={toggleMenu}
+  >
+    <Button variant="outline">About</Button>
+  </Link>
+  <Link
+    href="/contact"
+    className="text-gray-800 text-2xl py-4"
+    onClick={toggleMenu}
+  >
+    <Button variant="outline">Contact</Button>
+  </Link>
+  <Link
+    href="/events"
+    className="text-gray-800 text-2xl py-4"
+    onClick={toggleMenu}
+  >
+    <Button variant="outline">Events</Button>
+  </Link>
+  <Link
+    href="/sermons"
+    className="text-gray-800 text-2xl py-4"
+    onClick={toggleMenu}
+  >
+    <Button variant="outline">Sermons</Button>
+  </Link>
+</div>
+
       </nav>
-
-      {/* Mobile Navigation Links */}
-      {isOpen && (
-        <div className="fixed inset-0 bg-white z-20 flex flex-col justify-center items-center">
-          <button
-            onClick={toggleMenu}
-            className="absolute top-4 right-4 text-gray-800"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-
-          <Link
-            href="/about"
-            className="text-gray-800 text-2xl py-4"
-            onClick={toggleMenu}
-          >
-            <Button variant="outline">About</Button>
-          </Link>
-          <Link
-            href="/contact"
-            className="text-gray-800 text-2xl py-4"
-            onClick={toggleMenu}
-          >
-            <Button variant="outline">Contact</Button>
-          </Link>
-          <Link
-            href="/events"
-            className="text-gray-800 text-2xl py-4"
-            onClick={toggleMenu}
-          >
-            <Button variant="outline">Events</Button>
-          </Link>
-          <Link
-            href="/sermons"
-            className="text-gray-800 text-2xl py-4"
-            onClick={toggleMenu}
-          >
-            <Button variant="outline">Sermons</Button>
-          </Link>
-        </div>
-      )}
     </header>
   );
 }
