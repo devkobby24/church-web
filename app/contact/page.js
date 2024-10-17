@@ -8,13 +8,13 @@ import { toast } from "sonner"
 
 // Church contact information
 const churchContactInfo = {
-  address: "Agona Ashanti, Near The Habitat Apartment",
+  address: "Agona Ashanti, Inside The Habitat Apartment",
   phone: "024 442 3085",
   email: "nanakobby2002@gmail.com",
   serviceTimes: [
     "Glory service: Sundays 8:30-11:30am",
     "Midweek service: Wednesdays 6:30-8:30pm",
-    "Fridays Dominion Service: 7-9pm",
+    "Dominion Service: Fridays 7:00-9:00pm",
   ],
 };
 

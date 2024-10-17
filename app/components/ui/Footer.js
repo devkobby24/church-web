@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md"
+import { FaPhoneVolume, FaLocationDot } from "react-icons/fa6";
+
 
 const getCurrentYear = () => {
   return new Date().getFullYear();
@@ -9,7 +12,7 @@ export default function Footer() {
   const currentYear = getCurrentYear();
 
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-gray-800 text-white py-8 text-wrap">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           <div>
@@ -37,11 +40,11 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="mx-2 space-y-2">
+          <div className="mx-2 space-y-2 block">
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p>Agona Ashanti, Ghana</p>
-            <p>Phone: 024 442 3085</p>
-            <p href="mailto:adudarkokwasi0@gmail.com">Email: adudarkokwasi0@gmail.com</p>
+            <p><FaLocationDot />Agona Ashanti, Ghana</p>
+            <p><FaPhoneVolume /> 024 442 3085</p>
+            <p><MdOutlineEmail />adudarkokwasi0@gmail.com</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
