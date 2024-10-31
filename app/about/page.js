@@ -63,7 +63,7 @@ const AboutPage = () => {
                   src={leader.image}
                   alt={leader.name}
                   width={128}
-                  height={108}
+                  height={90}
                   className="rounded-full mx-auto mb-4 object-cover"
                 />
                 <h3 className="text-2xl font-semibold mb-2">{leader.name}</h3>

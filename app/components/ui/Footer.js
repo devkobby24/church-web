@@ -1,90 +1,74 @@
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
-import { MdOutlineEmail } from "react-icons/md"
+import { MdOutlineEmail } from "react-icons/md";
 import { FaPhoneVolume, FaLocationDot } from "react-icons/fa6";
 
+const getCurrentYear = () => new Date().getFullYear();
 
-const getCurrentYear = () => {
-  return new Date().getFullYear();
-};
+const QuickLinks = () => (
+  <div>
+    <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+    <ul className="space-y-2">
+      {["About Us", "Contact", "Events", "Sermons"].map((linkText) => (
+        <li key={linkText}>
+          <Link href={`/${linkText.toLowerCase().replace(" ", "")}`} className="hover:underline">
+            {linkText}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
+const ContactInfo = () => (
+  <div className="space-y-2">
+    <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+    <div className="flex flex-col items-start md:items-center space-y-1">
+      <span className="flex items-center md:space-x-2">
+        <FaLocationDot /> <span className="pl-1">Agona Ashanti, Ghana</span>
+      </span>
+      <span className="flex items-center space-x-2">
+        <FaPhoneVolume /> <span>024 442 3085</span>
+      </span>
+      <span className="flex items-center space-x-2">
+        <MdOutlineEmail /> <span>adudarkokwasi0@gmail.com</span>
+      </span>
+    </div>
+  </div>
+);
+
+const SocialLinks = () => (
+  <div>
+    <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
+    <div className="flex space-x-4 justify-center">
+      {[
+        { href: "https://www.facebook.com/profile.php?id=100066628902399", icon: <FaFacebookF size={24}/> },
+        { href: "https://www.instagram.com", icon: <FaInstagram size={24}/> },
+        { href: "https://www.youtube.com", icon: <FaTiktok size={24}/> },
+        { href: "https://api.whatsapp.com/send?phone=%2B233244423085", icon: <FaWhatsapp size={24}/> }
+      ].map(({ href, icon }, index) => (
+        <Link key={index} href={href} target="_blank" className="hover:text-gray-300">
+          <span className="h-10 w-10">{icon}</span>
+        </Link>
+      ))}
+    </div>
+  </div>
+);
 
 export default function Footer() {
   const currentYear = getCurrentYear();
 
   return (
-    <footer className="bg-gray-800 text-white py-8 text-wrap">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="hover:underline">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:underline">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/events" className="hover:underline">
-                  Events
-                </Link>
-              </li>
-              <li>
-                <Link href="/sermons" className="hover:underline">
-                  Sermons
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="mx-2 space-y-2 block">
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p><FaLocationDot />Agona Ashanti, Ghana</p>
-            <p><FaPhoneVolume /> 024 442 3085</p>
-            <p><MdOutlineEmail />adudarkokwasi0@gmail.com</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
-            <div className="flex space-x-4">
-              <Link
-                href="https://www.facebook.com/profile.php?id=100066628902399"
-                target="_blank"
-                className="hover:text-gray-300"
-              >
-                <FaFacebookF className="h-6 w-6" />
-              </Link>
-              <Link
-                href="https://www.instagram.com"
-                target="_blank"
-                className="hover:text-gray-300"
-              >
-                <FaInstagram className="h-6 w-6" />
-              </Link>
-              <Link
-                href="https://www.youtube.com"
-                target="_blank"
-                className="hover:text-gray-300"
-              >
-                <FaTiktok className="h-6 w-6" />
-              </Link>
-              <Link
-                href="https://api.whatsapp.com/send?phone=%2B233244423085&context=ARChFPY1-8ldfcD-R4Im0590P4pVyqsKT2PRV1HkUiAIWrLnER140FFdAlX--oJ8s-5Mtnz3wmeBZd_hxzDOzDMZYo9sWAR-msCFJ1taD3WuUQw3_onfUCT9ZMkZtujIo_N4NiX-LZfu1u4UAhE7lRpdJQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawF8esdleHRuA2FlbQIxMAABHSqNcqn4ioMrLD7YsoO8RhNUaFtHbAJ4ZiF-8PaC9SmC4GnLy9AkH_4bdg_aem_B7shkkXOafuiQLohO1vkow"
-                target="_blank"
-                className="hover:text-gray-300"
-              >
-                <FaWhatsapp className="h-6 w-6" />
-              </Link>
-            </div>
-          </div>
+    <footer className="bg-gray-800 text-white py-8 w-full">
+      <div className="w-full">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 items-center text-center pl-4">
+          <ContactInfo />
+          <QuickLinks />
+          <SocialLinks />
         </div>
-        <div className="mt-8 text-center text-sm">
-          <p>
-            &copy; {currentYear} Glorious Assurance Ministries. All rights reserved.
-          </p>
-        </div>
+      </div>
+      <div className="mt-8 text-center text-sm">
+        <p>&copy; {currentYear} Glorious Assurance Ministries. All rights reserved.</p>
       </div>
     </footer>
   );
