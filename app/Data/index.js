@@ -6,7 +6,7 @@ export const leadershipTeam = [
     name: "Prophet Kwasi Adu-Darko",
     title: "Chairman of the Board of Directors",
     bio: "Prophet Kwasi Adu-Darko has served our church for over 6 years, leading with a heart for community and spiritual growth.",
-    image: "/Ap.Adu.jpg", // Example image path
+    image: "/Ap.Adu.jpg",
   },
   {
     id: 2,
