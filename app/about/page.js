@@ -1,8 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Header from "../components/ui/Header";
 import Footer from "../components/ui/Footer";
-import LoadingSpinner from "./loading";
 import Image from "next/image";
 import { leadershipTeam, statements } from "../Data";
 
@@ -10,29 +9,6 @@ const AboutPage = () => {
   const visionStatement = statements[0].vision;
   const missionStatement = statements[1].mission;
   const historyStatement = statements[2].history;
-
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   // Simulate data fetching
-  //   const fetchData = async () => {
-  //     const dataFetchPromise = new Promise((resolve) =>
-  //       setTimeout(resolve, 1500),
-  //     );
-  //     const minimumLoadingTime = new Promise((resolve) =>
-  //       setTimeout(resolve, 1200),
-  //     );
-
-  //     await Promise.all([dataFetchPromise, minimumLoadingTime]);
-  //     setLoading(false);
-  //   };
-
-  //   fetchData();
-  // }, []);
-
-  // if (loading) {
-  //   return <LoadingSpinner />;
-  // }
 
   return (
     <div>

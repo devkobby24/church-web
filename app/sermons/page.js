@@ -1,8 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Header from "../components/ui/Header";
 import Footer from "../components/ui/Footer";
-import LoadingSpinner from "./loading"; // Import your loading spinner component
 
 // Dummy data for sermons (you can fetch this from an API or database in a real app)
 const sermons = [
@@ -39,28 +38,6 @@ const sermons = [
 ];
 
 const SermonsPage = () => {
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   // Simulate data fetching
-  //   const fetchData = async () => {
-  //     const dataFetchPromise = new Promise((resolve) =>
-  //       setTimeout(resolve, 1500),
-  //     );
-  //     const minimumLoadingTime = new Promise((resolve) =>
-  //       setTimeout(resolve, 1200),
-  //     );
-
-  //     await Promise.all([dataFetchPromise, minimumLoadingTime]);
-  //     setLoading(false);
-  //   };
-
-  //   fetchData();
-  // }, []);
-
-  // if (loading) {
-  //   return <LoadingSpinner />;
-  // }
 
   return (
     <div>

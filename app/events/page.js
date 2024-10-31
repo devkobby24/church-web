@@ -1,8 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Header from "../components/ui/Header";
 import Footer from "../components/ui/Footer";
-import LoadingSpinner from "./loading";
 
 // Dummy data for events (you can fetch this from an API or database in a real app)
 const events = [
@@ -33,28 +32,6 @@ const events = [
 ];
 
 const Events = () => {
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   // Simulate data fetching
-  //   const fetchData = async () => {
-  //     const dataFetchPromise = new Promise((resolve) =>
-  //       setTimeout(resolve, 500),
-  //     );
-  //     const minimumLoadingTime = new Promise((resolve) =>
-  //       setTimeout(resolve, 500),
-  //     );
-
-  //     await Promise.all([dataFetchPromise, minimumLoadingTime]);
-  //     setLoading(false);
-  //   };
-
-  //   fetchData();
-  // }, []);
-
-  // if (loading) {
-  //   return <LoadingSpinner />;
-  // }
 
   return (
     <div>
