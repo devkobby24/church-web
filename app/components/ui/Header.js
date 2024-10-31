@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,10 +19,12 @@ export default function Header() {
             href="/"
             className="font-bold font-sans text-gray-800 flex items-center  "
           >
-            <img
+            <Image
               src="/logo.jpg"
-              className="w-10 h-10 rounded-full mr-2"
+              className="rounded-full mr-2"
               alt="Logo"
+              width={40}
+              height={40}
             />
             <p className="sm:text-[16px]">Glorious Assurance Ministries</p>
           </Link>
