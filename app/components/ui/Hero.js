@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen text-white brightness-150">
+    <section className="relative h-screen text-white bg-black">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-90 bg-black"
+        className="absolute inset-0 md:bg-cover bg-contain h-screen md:w-1/2 mx-auto items-center bg-center opacity-90 bg-black"
         style={{
           backgroundImage: "url('/place.jpg?height=400&width=600')",
         }}

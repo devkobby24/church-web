@@ -40,11 +40,11 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="mx-2 space-y-2 block">
+          <div className="space-y-2 mx-2 hidden md:block">
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p><FaLocationDot />Agona Ashanti, Ghana</p>
-            <p><FaPhoneVolume /> 024 442 3085</p>
-            <p><MdOutlineEmail />adudarkokwasi0@gmail.com</p>
+            <p className="flex items-center"><FaLocationDot className="mr-4 w-5 h-5" />Agona Ashanti, Ghana</p>
+            <p className="flex items-center"><FaPhoneVolume className="mr-4 w-5 h-5" /> 024 442 3085</p>
+            <p className="flex items-center"><MdOutlineEmail className="mr-4 w-5 h-5" />adudarkokwasi0@gmail.com</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
