@@ -7,9 +7,9 @@ import Footer from "../components/ui/Footer";
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col">
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow pt-16">
         <HeroSection />
         <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4">
