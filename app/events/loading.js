@@ -12,7 +12,7 @@ export default function LoadingSpinner() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1200);
+    }, 500);
 
     // Clean up the timer
     return () => clearTimeout(timer);

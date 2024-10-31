@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md"
+import { FaPhoneVolume, FaLocationDot } from "react-icons/fa6";
+
 
 const getCurrentYear = () => {
   return new Date().getFullYear();
@@ -9,7 +12,7 @@ export default function Footer() {
   const currentYear = getCurrentYear();
 
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-gray-800 text-white py-8 text-wrap">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           <div>
@@ -37,11 +40,11 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="mx-2 space-y-2 block">
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p>Agona Ashanti, Ghana</p>
-            <p>Phone: 024 442 3085</p>
-            <p>Email: info@gracechurch.org</p>
+            <p><FaLocationDot />Agona Ashanti, Ghana</p>
+            <p><FaPhoneVolume /> 024 442 3085</p>
+            <p><MdOutlineEmail />adudarkokwasi0@gmail.com</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
@@ -65,7 +68,7 @@ export default function Footer() {
                 target="_blank"
                 className="hover:text-gray-300"
               >
-                <FaYoutube className="h-6 w-6" />
+                <FaTiktok className="h-6 w-6" />
               </Link>
               <Link
                 href="https://api.whatsapp.com/send?phone=%2B233244423085&context=ARChFPY1-8ldfcD-R4Im0590P4pVyqsKT2PRV1HkUiAIWrLnER140FFdAlX--oJ8s-5Mtnz3wmeBZd_hxzDOzDMZYo9sWAR-msCFJ1taD3WuUQw3_onfUCT9ZMkZtujIo_N4NiX-LZfu1u4UAhE7lRpdJQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawF8esdleHRuA2FlbQIxMAABHSqNcqn4ioMrLD7YsoO8RhNUaFtHbAJ4ZiF-8PaC9SmC4GnLy9AkH_4bdg_aem_B7shkkXOafuiQLohO1vkow"

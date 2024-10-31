@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Location() {
   return (
@@ -11,9 +12,9 @@ export default function Location() {
       <p>Agona, Ashanti Region, Ghana</p>
       <Link
         href="/contact"
-        className="text-blue-600 hover:underline mt-2 inline-block"
+        className="text-blue-600 hover:underline mt-2 inline-flex items-center space-x-2"
       >
-        Get Directions
+        <p>Get Directions</p> <FaArrowRight />
       </Link>
     </div>
   );

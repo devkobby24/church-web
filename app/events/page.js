@@ -9,57 +9,57 @@ const events = [
   {
     id: 1,
     title: "Sunday Service",
-    date: "September 29, 2024",
-    time: "9:00 AM - 11:00 AM",
-    location: "Main Church Hall",
+    date: "This and every Sunday",
+    time: "8:30 AM - 11:30 AM",
+    location: "Main Church Auditorium",
     description: "Join us for Sunday worship, prayer, and fellowship.",
   },
   {
     id: 2,
-    title: "Youth Fellowship",
-    date: "October 1, 2024",
-    time: "5:00 PM - 7:00 PM",
-    location: "Youth Center",
+    title: "Holy Ghost",
+    date: "November 27th, 2024 - November 29th, 2024",
+    time: "To Be Communicated",
+    location: "To Be Communicated",
     description: "A gathering for young people to worship and grow together.",
   },
   {
     id: 3,
-    title: "Community Outreach",
-    date: "October 5, 2024",
-    time: "10:00 AM - 2:00 PM",
-    location: "Downtown Community Center",
-    description: "Serve the community through various outreach programs.",
+    title: "Glorious X'mas Realities",
+    date: "December 23rd, 2024 - December 31st, 2024", 
+    time: "To Be Communicated",
+    location: "Main Church Auditorium",
+    description: "",
   },
 ];
 
 const Events = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate data fetching
-    const fetchData = async () => {
-      const dataFetchPromise = new Promise((resolve) =>
-        setTimeout(resolve, 1500),
-      );
-      const minimumLoadingTime = new Promise((resolve) =>
-        setTimeout(resolve, 1200),
-      );
+  // useEffect(() => {
+  //   // Simulate data fetching
+  //   const fetchData = async () => {
+  //     const dataFetchPromise = new Promise((resolve) =>
+  //       setTimeout(resolve, 500),
+  //     );
+  //     const minimumLoadingTime = new Promise((resolve) =>
+  //       setTimeout(resolve, 500),
+  //     );
 
-      await Promise.all([dataFetchPromise, minimumLoadingTime]);
-      setLoading(false);
-    };
+  //     await Promise.all([dataFetchPromise, minimumLoadingTime]);
+  //     setLoading(false);
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
-  if (loading) {
-    return <LoadingSpinner />;
-  }
+  // if (loading) {
+  //   return <LoadingSpinner />;
+  // }
 
   return (
     <div>
       <Header />
-      <div className="min-h-screen bg-gray-100 p-8">
+      <div className="min-h-screen bg-gray-100 p-8 pt-20">
         <h1 className="text-4xl font-bold text-center mb-8">Upcoming Events</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
