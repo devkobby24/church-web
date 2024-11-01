@@ -6,21 +6,21 @@ export const leadershipTeam = [
     name: "Prophet Kwasi Adu-Darko",
     title: "Chairman of the Board of Directors",
     bio: "Prophet Kwasi Adu-Darko has served our church for over 6 years, leading with a heart for community and spiritual growth.",
-    image: "/Ap.Adu.jpg",
+    image: "/images/Ap.Adu.jpg",
   },
   {
     id: 2,
     name: "Pastor Frimpong Kwabena George",
     title: "General Secretary",
     bio: "Pastor Frimpong Kwabena George is dedicated to ensuring the smooth operation of church activities and fostering communication within the congregation. His commitment to service and organizational skills help maintain the church's mission and vision.",
-    image: "/Ps.George.jpg",
+    image: "/images/Ps.George.jpg",
   },
   {
     id: 3,
     name: "Pastor Kissi Albert",
     title: "Administrative Director",
     bio: "Pastor Kissi Albert plays a crucial role in managing the church's administrative functions, ensuring that all operations run smoothly and efficiently. His dedication to service and organizational expertise helps maintain the church's mission and vision, providing a strong foundation for the church's activities and outreach programs.",
-    image: "/Ps.Kissi.jpg",
+    image: "/images/Ps.Kissi.jpg",
   },
 ];
 

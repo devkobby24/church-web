@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 md:bg-cover bg-contain h-screen md:w-1/2 mx-auto items-center bg-center opacity-90 bg-black"
         style={{
-          backgroundImage: "url('/place.jpg?height=400&width=600')",
+          backgroundImage: "url('/images/place.jpg?height=400&width=600')",
         }}
       />
       <div className="absolute inset-0 bg-black opacity-50" />

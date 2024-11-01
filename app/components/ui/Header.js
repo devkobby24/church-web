@@ -20,7 +20,7 @@ export default function Header() {
             className="font-bold font-sans text-gray-800 flex items-center  "
           >
             <Image
-              src="/logo.jpg"
+              src="/images/logo.jpg"
               className="rounded-full mr-2"
               alt="Logo"
               width={40}
