@@ -161,6 +161,12 @@ export default function Header() {
           >
             <Button variant="outline">Sermons</Button>
           </Link>
+          <Link
+            href="/camera"
+            className="text-gray-800 text-lg hover:text-indigo-600"
+          >
+            Camera
+          </Link>
         </div>
       </nav>
     </header>
