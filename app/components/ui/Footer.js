@@ -8,10 +8,10 @@ const getCurrentYear = () => new Date().getFullYear();
 const QuickLinks = () => (
   <div>
     <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-    <ul className="space-y-2">
+    <ul className="space-y-1">
       {["About Us", "Contact", "Events", "Sermons"].map((linkText) => (
         <li key={linkText}>
-          <Link href={`/${linkText.toLowerCase().replace(" ", "")}`} className="hover:underline">
+          <Link href={`/${linkText.toLowerCase().replace(" ", "")}`} className="hover:underline text-sm md:text-base">
             {linkText}
           </Link>
         </li>
@@ -24,14 +24,14 @@ const ContactInfo = () => (
   <div className="space-y-2">
     <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
     <div className="flex flex-col items-start md:items-center space-y-1">
-      <span className="flex items-center md:space-x-2">
-        <FaLocationDot /> <span className="pl-1">Agona Ashanti, Ghana</span>
+      <span className="flex items-center space-x-2">
+        <FaLocationDot /> <span className="text-sm md:text-base">Agona Ashanti, Ghana</span>
       </span>
       <span className="flex items-center space-x-2">
-        <FaPhoneVolume /> <span>024 442 3085</span>
+        <FaPhoneVolume /> <span className="text-sm md:text-base">024 442 3085</span>
       </span>
       <span className="flex items-center space-x-2">
-        <MdOutlineEmail /> <span>adudarkokwasi0@gmail.com</span>
+        <MdOutlineEmail /> <span className="text-sm md:text-base">adudarkokwasi0@gmail.com</span>
       </span>
     </div>
   </div>
@@ -43,8 +43,6 @@ const SocialLinks = () => (
     <div className="flex space-x-4 justify-center">
       {[
         { href: "https://www.facebook.com/profile.php?id=100066628902399", icon: <FaFacebookF size={24}/> },
-        { href: "https://www.instagram.com", icon: <FaInstagram size={24}/> },
-        { href: "https://www.youtube.com", icon: <FaTiktok size={24}/> },
         { href: "https://api.whatsapp.com/send?phone=%2B233244423085", icon: <FaWhatsapp size={24}/> }
       ].map(({ href, icon }, index) => (
         <Link key={index} href={href} target="_blank" className="hover:text-gray-300">
@@ -67,7 +65,7 @@ export default function Footer() {
           <SocialLinks />
         </div>
       </div>
-      <div className="mt-8 text-center text-sm">
+      <div className="mt-8 text-center text-xs md:text-base">
         <p>&copy; {currentYear} Glorious Assurance Ministries. All rights reserved.</p>
       </div>
     </footer>
