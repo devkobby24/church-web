@@ -109,7 +109,7 @@ export default function Header() {
 
         {/* Mobile Navigation Links - Sliding in from the side */}
         <div
-          className={`fixed top-0 bottom-0 right-0 bg-gray-100 z-20 w-40 transform transition-transform duration-500 ease-in-out flex flex-col items-center h-72 rounded-lg shadow-lg ${
+          className={`fixed top-0 bottom-0 right-0 bg-gray-100 z-20 w-40 transform transition-transform duration-500 ease-in-out flex flex-col items-center max-h-96 rounded-lg shadow-lg ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -163,9 +163,10 @@ export default function Header() {
           </Link>
           <Link
             href="/camera"
-            className="text-gray-800 text-lg hover:text-indigo-600"
+            className="text-gray-800 text-2xl py-4"
+            onClick={toggleMenu}
           >
-            Camera
+            <Button variant="outline">Camera</Button>
           </Link>
         </div>
       </nav>
