@@ -56,6 +56,12 @@ export default function Header() {
           >
             Sermons
           </Link>
+          <Link
+            href="/camera"
+            className="text-gray-800 text-lg hover:text-indigo-600"
+          >
+            Camera
+          </Link>
         </div>
       </nav>
 
