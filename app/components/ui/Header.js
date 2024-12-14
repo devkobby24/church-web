@@ -161,13 +161,6 @@ export default function Header() {
           >
             <Button variant="outline">Sermons</Button>
           </Link>
-          <Link
-            href="/camera"
-            className="text-gray-800 text-2xl py-4"
-            onClick={toggleMenu}
-          >
-            <Button variant="outline">Camera</Button>
-          </Link>
         </div>
       </nav>
     </header>
