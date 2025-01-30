@@ -42,8 +42,8 @@ const SocialLinks = () => (
     <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
     <div className="flex space-x-4 justify-center">
       {[
-        { href: "https://www.facebook.com/profile.php?id=100066628902399", icon: <FaFacebookF size={24}/> },
-        { href: "https://api.whatsapp.com/send?phone=%2B233244423085", icon: <FaWhatsapp size={24}/> }
+        { href: "https://www.facebook.com/profile.php?id=100066628902399", icon: <FaFacebookF size={24} /> },
+        { href: "https://api.whatsapp.com/send?phone=%2B233244423085", icon: <FaWhatsapp size={24} /> }
       ].map(({ href, icon }, index) => (
         <Link key={index} href={href} target="_blank" className="hover:text-gray-300">
           <span className="h-10 w-10">{icon}</span>
